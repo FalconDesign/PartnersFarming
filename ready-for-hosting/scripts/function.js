@@ -1,0 +1,1 @@
+"use strict";var a=22,b=[2,3,4,5],hello=function(){return"hey"},c=[].concat(b),lovetCase="heello";
