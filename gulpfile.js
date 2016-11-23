@@ -58,7 +58,7 @@ gulp.task('es6', () => {
 
 // Js compression for smallest JavaScript file size
 
-gulp.task('compress', function() {
+gulp.task('compress', () => {
   gulp.src('dev-app/js/dist/function.js')
     .pipe(minifyJS({
         ext:{
