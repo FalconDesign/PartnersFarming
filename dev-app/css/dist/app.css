@@ -1,74 +1,3 @@
-body * {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  font-family: Helvetica, sans-serif; }
-
-#partners-main header {
-  margin: 0 auto;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  width: 100%;
-  max-width: 990px;
-  padding-left: 15px;
-  padding-right: 15px; }
-  #partners-main header .logo {
-    text-align: center;
-    padding-bottom: 10px; }
-  #partners-main header .phone-numbers {
-    text-align: center;
-    color: #3f3f3f;
-    font-size: 23px; }
-
-@media (min-width: 768px) {
-  #partners-main header::after {
-    content: "";
-    display: block;
-    clear: both; }
-  #partners-main header .logo {
-    float: left; }
-  #partners-main header .phone-numbers {
-    float: right;
-    text-align: right; } }
-
-#partners-main .search .container {
-  background: url("../images/search_background.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 100%; }
-  #partners-main .search .container .wrap {
-    margin: 0 auto;
-    max-width: 990px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 50px;
-    padding-bottom: 50px; }
-    #partners-main .search .container .wrap input {
-      width: 100%;
-      border: 1px solid black;
-      height: 42px;
-      display: inline-block;
-      padding-left: 33px;
-      padding-right: 33px;
-      color: #acadad;
-      font-style: italic;
-      font-size: 18px;
-      font-weight: 400; }
-    #partners-main .search .container .wrap button {
-      width: 100%;
-      border: 1px solid black;
-      height: 42px;
-      background-color: #c9a100;
-      display: inline-block;
-      color: white;
-      font-size: 18px;
-      cursor: pointer;
-      margin-top: 5px; }
-      #partners-main .search .container .wrap button:active {
-        background: #907300; }
-      #partners-main .search .container .wrap button:focus {
-        outline: none; }
-
 #partners-main .search .parts-filter {
   margin: 0 auto;
   width: 100%;
@@ -98,50 +27,42 @@ body * {
         background-color: #c9a100;
         color: white; } }
 
-@media (min-width: 768px) {
-  #partners-main .search .container .wrap {
-    max-width: 670px; }
-    #partners-main .search .container .wrap::after {
-      content: "";
-      display: block;
-      clear: both; }
-    #partners-main .search .container .wrap input {
-      width: 100%;
-      max-width: 475px;
-      float: left; }
-    #partners-main .search .container .wrap button {
-      max-width: 150px;
-      float: right;
-      margin-top: 0; } }
-
 #partners-main .brands {
-  margin: 0 auto; }
+  padding-left: 15px;
+  padding-right: 15px; }
   #partners-main .brands::after {
     content: "";
     display: block;
     clear: both; }
-  #partners-main .brands .thumbnail {
-    text-align: center;
-    text-transform: uppercase;
-    -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5);
-    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5); }
-    #partners-main .brands .thumbnail:hover {
-      background: #c9a100; }
-    #partners-main .brands .thumbnail figcaption {
-      font-size: 25px;
-      font-weight: bold;
-      color: #3f3f3f; }
+  #partners-main .brands a {
+    text-decoration: none;
+    width: 100%;
+    display: inline-block;
+    margin-top: 10px; }
+    #partners-main .brands a .thumbnail {
+      display: inline-block;
+      width: 100%;
+      cursor: pointer;
+      text-align: center;
+      text-transform: uppercase;
+      -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5);
+      box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5);
+      width: 100%; }
+      #partners-main .brands a .thumbnail:hover {
+        background-color: rgba(201, 161, 0, 0.5); }
+      #partners-main .brands a .thumbnail span {
+        font-size: 20px;
+        font-weight: bold;
+        color: #3f3f3f;
+        display: inline-block;
+        width: 100%; }
 
-@media (min-width: 768px) {
+@media (min-width: 500px) {
   #partners-main .brands {
     width: 100%;
     max-width: 990px;
-    padding-left: 15px;
-    padding-right: 15px;
-    text-align: center; }
-    #partners-main .brands .thumbnail {
-      display: inline-block;
-      margin: 10px !important;
-      width: 100%;
+    text-align: center;
+    margin: 0 auto; }
+    #partners-main .brands a {
       max-width: 260px;
-      cursor: pointer; } }
+      margin: 10px !important; } }

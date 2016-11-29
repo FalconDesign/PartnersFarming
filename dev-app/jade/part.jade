@@ -1,0 +1,63 @@
+doctype html
+html(lang="en")
+  head
+    title Конкретная запчасть
+    meta(charset="utf-8")
+    meta(name="description",content="")
+    meta(name="keywords",content="")
+    meta(name="author",content="Dmitry Lysenko")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="styles/critical.css", media="screen")
+    //- link(rel="apple-touch-icon" href="/apple-touch-icon.png")
+    //- //- link(rel="icon" href="/favicon.ico")
+  body
+    #partners-part
+      header
+        .logo
+          img(src="images/partnersfarming.png", alt="Запчасти к сельхозтехнике")
+        .phone-numbers
+          span +38 (093) 123-33-44<br />
+          span +38 (050) 123-33-44<br />
+          span info@partnersfarming.com<br />
+          span м. Київ, пров. Ватутіна, 4
+      .search
+        .container
+          .wrap
+            input(type="text", placeholder="Введите артикул, название производителя")
+            button(type="button") Найти!     
+      
+      .part-container
+        article          
+          .left-side 
+            img(src="images/noimage.png", alt="noimage")         
+          .right-side
+            h1 Lorem Ipsum B2345F34AAA
+            span.category Category: Di Amet
+            span.manufacturer Manufacturer: Claas
+            summary Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.       
+            span.price 1000 грн          
+            button(type="button") Заказать!
+            
+      .order
+        span.title-order Оформить заказ!
+        span.info Для приобретениея товара, или за любой информацией <br />
+          | обращайтесь по телефонам: 
+        span.number  +38 (093) 123-33-44 
+        span.number  +38 (050) 123-33-44
+        span.leave-info  Или оставьте нам свои контакты, и мы Вам перезвоним!  
+        .form-container
+          form
+            .your-name
+              label(for="your-name") Ваше имя:
+              input(type="text", id="your-name")
+            .your-phone
+              label(for="your-phone") Ваш Телефон:
+              input(type="tel", id="your-phone")
+            button(type="submit") Отправить
+              
+      footer
+                  
+    link(rel="stylesheet", href="styles/libs/normalize.css", media="screen")
+    link(rel="stylesheet", href="styles/part.css", media="screen")
+    script(type="text/javascript" src="scripts/function.js")
+    

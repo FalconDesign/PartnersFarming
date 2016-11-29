@@ -1,0 +1,131 @@
+$dark: #3b3b3b
+$main: #c9a100
+@mixin clearFix ()
+  &::after
+    content: ""
+    display: block
+    clear: both
+#brand-parts
+  margin: 0 auto
+  width: 100%
+  max-width: 990px
+  padding-left: 15px
+  padding-right: 15px
+  text-align: center
+  a.part-thumbnail
+    color: $dark
+    display: inline-block
+    text-decoration: none
+    width: 100%
+    text-align: center
+    box-shadow: 0px 0px 3px 0px fade-out(black, 0.5)
+    margin-top: 15px
+    @media (min-width: 300px)
+      max-width: 230px
+      margin-left: 8px
+      .part-name, .current-brand, .category, .number
+        padding-left: 7px
+        padding-right: 7px
+        text-align: left
+    .current-brand, .category, .number
+      padding-bottom: 5px
+    .picture
+      height: 150px
+      width: 100%
+      background: lightgray
+      display: inline-block
+    .part-name
+      padding-bottom: 15px
+      display: inline-block
+      width: 100%
+      font-size: 24px
+    .current-brand
+      display: inline-block
+      width: 100%
+      font-size: 18px
+      font-weight: bolder
+    .category
+      display: inline-block
+      width: 100%
+      font-size: 18px
+    .number
+      display: inline-block
+      width: 100%
+      font-size: 18px
+    .price
+      display: inline-block
+      width: 100%
+      color: #fff
+      font-size: 24px
+      background-color: $main
+      padding: 6px 0 6px 0
+
+
+.form
+  width: 100%
+  max-width: 990px
+  padding-left: 15px
+  padding-right: 15px
+  margin: 50px auto 70px auto
+  +clearFix()
+  span
+    text-align: center
+    width: 100%
+    display: inline-block
+    font-size: 18px
+    color: $dark
+    @media (min-width: 768px)
+      font-size: 30px
+  form
+    margin: 20px auto 0 auto
+    @media (min-width: 768px)
+      width: 100%
+      max-width: 640px
+    .left-side
+      @media (min-width: 768px)
+        float: left
+        max-width: 235px
+      label
+        color: $main
+        font-size: 18px
+      input
+        color: $dark
+        padding-left: 5px
+        width: 100%
+        border: 2px solid #aaaaaa
+        height: 30px
+        &:focus
+          outline: none
+      input:nth-child(4), input:nth-child(2)
+        margin-bottom: 12px
+      input:last-child
+        @media (max-width: 768px)
+          margin-bottom: 12px
+    .right-side
+      @media (min-width: 768px)
+        float: right
+        max-width: 395px
+      label
+        color: $main
+        font-size: 18px
+      textarea
+        color: $dark
+        padding-left: 5px
+        width: 100%
+        border: 2px solid #aaaaaa
+        min-height: 154px
+        resize: none
+        &:focus
+          outline: none
+    button
+      margin-top: 8px
+      width: 100%
+      color: #fff
+      background-color: $main
+      border: none
+      font-weight: bold
+      height: 30px
+      &:active
+        background-color: #a98801
+      &:focus
+        outline: none

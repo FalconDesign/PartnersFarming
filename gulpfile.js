@@ -24,7 +24,15 @@ gulp.task('minify-css', () => {
 
     gulp.src('dev-app/css/dist/critical.css')
       .pipe(cleanCSS({compatibility: 'ie8'}))
-      .pipe(gulp.dest('ready-for-hosting/styles'));
+      .pipe(gulp.dest('ready-for-hosting/styles'))
+
+    gulp.src('dev-app/css/dist/zapchasti.css')
+      .pipe(cleanCSS({compatibility: 'ie8'}))
+      .pipe(gulp.dest('ready-for-hosting/styles'))
+
+    gulp.src('dev-app/css/dist/part.css')
+      .pipe(cleanCSS({compatibility: 'ie8'}))
+      .pipe(gulp.dest('ready-for-hosting/styles'))
 });
 
 
@@ -39,6 +47,22 @@ gulp.task('autoprefixer', () => {
 
 // Critical css
   gulp.src('dev-app/css/critical.css')
+      .pipe(autoprefixer({
+          browsers: ['last 15 versions'],
+          cascade: false
+      }))
+      .pipe(gulp.dest('dev-app/css/dist'))
+
+//  Zapchsti css
+  gulp.src('dev-app/css/zapchasti.css')
+      .pipe(autoprefixer({
+          browsers: ['last 15 versions'],
+          cascade: false
+      }))
+      .pipe(gulp.dest('dev-app/css/dist'))
+
+//  Part css
+  gulp.src('dev-app/css/part.css')
       .pipe(autoprefixer({
           browsers: ['last 15 versions'],
           cascade: false
@@ -79,7 +103,8 @@ gulp.task('templates', () => {
 
   gulp.src('dev-app/jade/*.jade')
     .pipe(jade({
-      locals: YOUR_LOCALS
+      locals: YOUR_LOCALS,
+      pretty: true
     }))
     .pipe(gulp.dest('ready-for-hosting'))
 });
